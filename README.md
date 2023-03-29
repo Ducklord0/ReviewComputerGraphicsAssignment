@@ -11,7 +11,8 @@ The water shader takes tex coordinates and edits their heigh based on the amplit
 
 
 Task 3:
-It gives it a old pixely feel to it. 
+This is blurring. Progressive upsampling to be specific. 
+
 
 Gets the size of the screen
 int width = source.width / integerRange;
@@ -19,10 +20,15 @@ int height = source.height / integerRange;
 RenderTextureFormat format = source.format;
 RenderTexture[] textures = new RenderTexture[16];
 
+Current destination
+RenderTexture currentDestination = textures[0] = RenderTexture.GetTemporary(width, height, 0, format);
 
+Used for the final blit and then releases it
 
 
 Task 4:
+
+
 
 Task 5:
 It colors the shadow
