@@ -6,10 +6,19 @@ Deferred rendering: This renders the material on every visible object in the sce
 ![image](https://user-images.githubusercontent.com/91763901/228613270-6ad454a4-0c89-459d-a434-fa83bf1e72c5.png)
 
 Task 2:
+The water shader takes tex coordinates and edits their heigh based on the amplitude set. The amount that it happens over the texture depends on the frequency and the waves move using Time function implemented in unity and multiplying it by speed. 
+![image](https://user-images.githubusercontent.com/91763901/228621502-d22f01cf-2445-4e8b-b2b4-538c3decfd8c.png)
 
 
 Task 3:
 It gives it a old pixely feel to it. 
+
+Gets the size of the screen
+int width = source.width / integerRange;
+int height = source.height / integerRange;
+RenderTextureFormat format = source.format;
+RenderTexture[] textures = new RenderTexture[16];
+
 
 
 
@@ -30,4 +39,8 @@ Adding the shadow color to the object and uses 1-atten to tell how dark or light
 c.rgb += _ShadowColor.xyz * (1.0 - atten);
 c.a = s.Alpha;
 
+This could be used as a cartoon shader to make it have unique colors or you could change it to add textures to make it able to have texture on the shadow. 
+
 Task 6:
+I implemented the shadow shader on the mast of the ship
+This can be used on the objects on the surface of the water to get a cool moving shadow on the moving water
