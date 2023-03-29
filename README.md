@@ -38,6 +38,15 @@ currentDestination = textures[i] =
 RenderTexture.GetTemporary(width, height, 0,
 format);
 
+Breaks if its not big enough
+if (height < 2) {
+break;
+}
+
+Renders every side twice and stores it in an array
+![image](https://user-images.githubusercontent.com/91763901/228685262-4e644990-3ba5-4295-8499-f708532a0c73.png)
+
+
 Task 4:
 
 
