@@ -24,7 +24,19 @@ Current destination
 RenderTexture currentDestination = textures[0] = RenderTexture.GetTemporary(width, height, 0, format);
 
 Used for the final blit and then releases it
+Graphics.Blit(source, currentDestination);
+RenderTexture currentSource = currentDestination;
+Graphics.Blit(currentSource, destination);
+RenderTexture.ReleaseTemporary(currentSource);
 
+A for loop used for iteration of downsampling
+int i = 1;
+for (; i < iterations; i++) {
+width /= 2;
+height /= 2;
+currentDestination = textures[i] =
+RenderTexture.GetTemporary(width, height, 0,
+format);
 
 Task 4:
 
