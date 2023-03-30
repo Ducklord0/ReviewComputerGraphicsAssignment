@@ -7,7 +7,8 @@ Deferred rendering: This renders the material on every visible object in the sce
 
 Task 2:
 The water shader takes tex coordinates and edits their heigh based on the amplitude set. The amount that it happens over the texture depends on the frequency and the waves move using Time function implemented in unity and multiplying it by speed. 
-![image](https://user-images.githubusercontent.com/91763901/228621502-d22f01cf-2445-4e8b-b2b4-538c3decfd8c.png)
+![image](https://user-images.githubusercontent.com/91763901/228719141-46686e2b-fe62-4fb1-a65f-bdfdc113216b.png)
+
 This could be used in a more cartoony game like borderlands to keep its art style if they add an outline to it
 
 Task 3:
@@ -68,10 +69,10 @@ It colors the shadow
 This makes a color for the shadow
 ShadowColor("Shadow Color", Color) = (1,1,1,1)
 
-Takes the normal of the light hitting the surface and getting the dot product. Then making it the maximum value it can. 
+Takes the normal of the light hitting the surface and getting the dot product. 
 fixed diff = max(0, dot(s.Normal, lightDir));
 
-
+this determines the shade of the color depending how far the lightsource is from the object. 
 c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 0.5);
 
 Adding the shadow color to the object and uses 1-atten to tell how dark or light it is depending on the distance from the light source. 
@@ -86,3 +87,21 @@ I added a glass shader to the boat mast. I added it so that the color i added mu
 ![image](https://user-images.githubusercontent.com/91763901/228715725-26d8c156-a9b3-4fa3-9d1e-38be0082c37d.png)
 It could be used on glass a window to make it get more tinted yellow during the day or white during the night to show the different colored light sources. 
 
+
+Task1:
+I feel i made a good diagram and gave accurate descriptions.
+
+Task2:
+I didn't get the square waves but i got close to the toon shading but ran out of time. I know I don't deserve full marks but i worked tirelessly on it for this so i think i sould get some marks. 
+
+Task3:
+I feel i broke down each part accurately maybe not in enough detail but i think i did well.
+
+Task4:
+I feel i made a fun shadow and outline shader that have actual possible implementation just maybe not in this game. 
+
+Task5:
+I gave accurate description of each line i highlighted.
+
+Task6:
+The glass shader isnt that good but its cool and has application just not in the assignment. 
