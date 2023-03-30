@@ -13,7 +13,6 @@ The water shader takes tex coordinates and edits their heigh based on the amplit
 Task 3:
 This is blurring with progressive upsampling to be specific. 
 
-
 Gets the size of the screen
 int width = source.width / integerRange;
 int height = source.height / integerRange;
