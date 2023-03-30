@@ -81,4 +81,8 @@ c.a = s.Alpha;
 This could be used as a cartoon shader to make it have unique colors or you could change it to add textures to make it able to have texture on the shadow. 
 
 Task 6:
+I added a glass shader to the boat mast. I added it so that the color i added multiplies itself by the tint. It makes it so that the gaps in the glass can be tinted and become more or less transparent. 
+![image](https://user-images.githubusercontent.com/91763901/228715673-46bc2c17-139c-4d2f-9ba4-dbd423b3cd76.png)
+![image](https://user-images.githubusercontent.com/91763901/228715725-26d8c156-a9b3-4fa3-9d1e-38be0082c37d.png)
+
 
