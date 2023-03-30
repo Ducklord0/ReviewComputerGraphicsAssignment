@@ -11,7 +11,7 @@ The water shader takes tex coordinates and edits their heigh based on the amplit
 
 
 Task 3:
-This is blurring. Progressive upsampling to be specific. 
+This is blurring with progressive upsampling to be specific. 
 
 
 Gets the size of the screen
@@ -29,7 +29,7 @@ RenderTexture currentSource = currentDestination;
 Graphics.Blit(currentSource, destination);
 RenderTexture.ReleaseTemporary(currentSource);
 
-A for loop used for iteration of downsampling
+A for loop used for iteration of downsampling the screen width and height and stores it in an array
 int i = 1;
 for (; i < iterations; i++) {
 width /= 2;
@@ -62,12 +62,11 @@ fixed diff = max(0, dot(s.Normal, lightDir));
 
 c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 0.5);
 
-Adding the shadow color to the object and uses 1-atten to tell how dark or light it is. 
+Adding the shadow color to the object and uses 1-atten to tell how dark or light it is depending on the distance from the light source. 
 c.rgb += _ShadowColor.xyz * (1.0 - atten);
 c.a = s.Alpha;
 
 This could be used as a cartoon shader to make it have unique colors or you could change it to add textures to make it able to have texture on the shadow. 
 
 Task 6:
-I implemented the shadow shader on the mast of the ship
-This can be used on the objects on the surface of the water to get a cool moving shadow on the moving water
+
