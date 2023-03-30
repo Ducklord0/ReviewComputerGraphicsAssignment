@@ -48,7 +48,19 @@ Renders every side twice and stores it in an array
 
 
 Task 4:
+Shadow
+I added the ability to make shadows appear as a chosen color on specific objects. 
+I simply added a shadow color to the shader shader then got the secondshadow pass and multiplied it by the color. 
+![image](https://user-images.githubusercontent.com/91763901/228713360-d2a374be-fa12-4b12-974d-c513f0ee11f4.png)
+![image](https://user-images.githubusercontent.com/91763901/228713289-cb044b0d-1cde-447f-a9b7-eb6a1f859200.png)
 
+
+Outline
+I added a second layer to the outline that can have its color altered. 
+We made a second color at the start and made a second pass for the second layer. I turned off the zbuffer on and off to get it behind the object and doesnt affect the object.
+I divided the width of the outline by 2 so its always half of the outer outlines length. 
+![image](https://user-images.githubusercontent.com/91763901/228713080-d4ea1cb0-ea6b-4bca-9c56-3d41526ac329.png)
+![image](https://user-images.githubusercontent.com/91763901/228713231-3f2aafef-a475-47a9-9df5-cf6532242637.png)
 
 
 Task 5:
